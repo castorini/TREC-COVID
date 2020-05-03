@@ -6,7 +6,7 @@ xj4wang_run1,0.6513,manual
 run3,0.6273,manual
 UIUC_DMG_setrank_ret,0.6082,manual
 sab20.1.meta.docs,0.6080,automatic
-run2,0.6032,manual
+run2,0.6032,automatic
 OHSU_RUN2,0.5966,manual
 cu_dbmi_bm25_1,0.5887,manual
 IRIT_marked_base,0.5880,automatic
