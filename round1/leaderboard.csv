@@ -3,7 +3,7 @@ GUIR_S2,run1,manual,0.7933,0.6844,0.2663,0.4159,,yes,https://ir.nist.gov/covidSu
 BBGhelani,BBGhelani1,manual,0.82,0.6689,0.3008,0.5294,,no,https://ir.nist.gov/covidSubmit/archive/round1/BBGhelani1.pdf
 BBGhelani,BBGhelani2,manual,0.82,0.6689,0.3005,0.5275,,yes,https://ir.nist.gov/covidSubmit/archive/round1/BBGhelani2.pdf
 xj4wang,xj4wang_run1,manual,0.8333,0.6513,0.2367,0.4599,,yes,https://ir.nist.gov/covidSubmit/archive/round1/xj4wang_run1.pdf
-GUIR_S2,run3,manual,0.7333,0.6273,0.2426,0.3969,no,,https://ir.nist.gov/covidSubmit/archive/round1/run3.pdf
+GUIR_S2,run3,manual,0.7333,0.6273,0.2426,0.3969,,no,https://ir.nist.gov/covidSubmit/archive/round1/run3.pdf
 UIUC_DMG,UIUC_DMG_setrank_ret,manual,0.7133,0.6082,0.2206,0.3783,,yes,https://ir.nist.gov/covidSubmit/archive/round1/UIUC_DMG_setrank_ret.pdf
 sabir,sab20.1.meta.docs,automatic,0.78,0.608,0.3128,0.4832,,yes,https://ir.nist.gov/covidSubmit/archive/round1/sab20.1.meta.docs.pdf
 GUIR_S2,run2,automatic,0.6867,0.6032,0.2601,0.4177,,no,https://ir.nist.gov/covidSubmit/archive/round1/run2.pdf
@@ -26,9 +26,9 @@ uogTr,uogTrDPH_QE_QQ,automatic,0.64,0.5338,0.2563,0.4386,,no,https://ir.nist.gov
 unique_ptr,UP-rrf5rnd1,automatic,0.68,0.5316,0.247,0.3983,,yes,https://ir.nist.gov/covidSubmit/archive/round1/UP-rrf5rnd1.pdf
 BioinformaticsUA,BioinfoUA-emb,automatic,0.6333,0.5298,0.1903,0.353,,yes,https://ir.nist.gov/covidSubmit/archive/round1/BioinfoUA-emb.pdf
 UIowaS,UIowaS_Run3,automatic,0.6467,0.5286,0.2625,0.4686,,yes,https://ir.nist.gov/covidSubmit/archive/round1/UIowaS_Run3.pdf
-covidex,T5R1,automatic,0.6467,0.5223,0.1919,0.2838,,yes,https://ir.nist.gov/covidSubmit/archive/round1/T5R1.pdf
+covidex,T5R1,automatic,0.6467,0.5223,0.1919,0.2838,http://covidex.ai/,yes,https://ir.nist.gov/covidSubmit/archive/round1/T5R1.pdf
 azimiv,azimiv_wk1,automatic,0.6067,0.5219,0.2351,0.4017,,yes,https://ir.nist.gov/covidSubmit/archive/round1/azimiv_wk1.pdf
-covidex,T5R3,automatic,0.6333,0.5124,0.2111,0.3503,,no,https://ir.nist.gov/covidSubmit/archive/round1/T5R3.pdf
+covidex,T5R3,automatic,0.6333,0.5124,0.2111,0.3503,http://covidex.ai/,no,https://ir.nist.gov/covidSubmit/archive/round1/T5R3.pdf
 sabir,sab20.1.merged,automatic,0.6267,0.5115,0.241,0.4819,,no,https://ir.nist.gov/covidSubmit/archive/round1/sab20.1.merged.pdf
 UIowaS,UIowaS_Run2,automatic,0.6467,0.5089,0.231,0.4376,,no,https://ir.nist.gov/covidSubmit/archive/round1/UIowaS_Run2.pdf
 smith,smith.rm3,automatic,0.6467,0.5087,0.2844,0.4669,,yes,https://ir.nist.gov/covidSubmit/archive/round1/smith.rm3.pdf
@@ -62,4 +62,4 @@ RMITB,RMITBFuseM2,manual,0.56,0.4053,0.1968,0.4247,,no,https://ir.nist.gov/covid
 POZNAN,poznan_run1,manual,0.5867,0.4012,0.1199,0.335,,yes,https://ir.nist.gov/covidSubmit/archive/round1/poznan_run1.pdf
 sabir,sab20.1.blind,automatic,0.54,0.3933,0.1659,0.4194,,no,https://ir.nist.gov/covidSubmit/archive/round1/sab20.1.blind.pdf
 RMITB,RMITBM1,manual,0.4733,0.3511,0.178,0.4162,,yes,https://ir.nist.gov/covidSubmit/archive/round1/RMITBM1.pdf
-covidex,BM25R2,automatic,0.4,0.318,0.1628,0.4171,,no,https://ir.nist.gov/covidSubmit/archive/round1/BM25R2.pdf
+covidex,BM25R2,automatic,0.4,0.318,0.1628,0.4171,http://covidex.ai/,no,https://ir.nist.gov/covidSubmit/archive/round1/BM25R2.pdf
