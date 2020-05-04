@@ -1,5 +1,5 @@
 team,run,runtype,p@5,ndcg@10,map,bpref,contributed judgments,report
-GUIR_S2,run1,manual,0.7933,0.6844,0.2663,0.4159,yes,https://ir.nist.gov/covidSubmit/archive/round1/run1.pdf
+GUIR_S2,run1,manual,0.7933,0.6844,0.2663,0.4159,yes,<a href="https://ir.nist.gov/covidSubmit/archive/round1/run1.pdf">report</a>
 BBGhelani,BBGhelani1,manual,0.82,0.6689,0.3008,0.5294,no,https://ir.nist.gov/covidSubmit/archive/round1/BBGhelani1.pdf
 BBGhelani,BBGhelani2,manual,0.82,0.6689,0.3005,0.5275,yes,https://ir.nist.gov/covidSubmit/archive/round1/BBGhelani2.pdf
 xj4wang,xj4wang_run1,manual,0.8333,0.6513,0.2367,0.4599,yes,https://ir.nist.gov/covidSubmit/archive/round1/xj4wang_run1.pdf
