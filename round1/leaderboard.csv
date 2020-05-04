@@ -24,7 +24,7 @@ udel_fang,udel_fang_run3,automatic,0.6333,0.537,0.2973,0.4538,,no,https://ir.nis
 uogTr,uogTrDPH_QE,automatic,0.64,0.5338,0.2563,0.4386,,yes,https://ir.nist.gov/covidSubmit/archive/round1/uogTrDPH_QE.pdf
 uogTr,uogTrDPH_QE_QQ,automatic,0.64,0.5338,0.2563,0.4386,,no,https://ir.nist.gov/covidSubmit/archive/round1/uogTrDPH_QE_QQ.pdf
 unique_ptr,UP-rrf5rnd1,automatic,0.68,0.5316,0.247,0.3983,,yes,https://ir.nist.gov/covidSubmit/archive/round1/UP-rrf5rnd1.pdf
-BioinformaticsUA,BioinfoUA-emb,automatic,0.6333,0.5298,0.1903,0.353,,yes,https://ir.nist.gov/covidSubmit/archive/round1/BioinfoUA-emb.pdf
+BioinformaticsUA,BioinfoUA-emb,automatic,0.6333,0.5298,0.1903,0.353,http://covidsearch.web.ua.pt/,yes,https://ir.nist.gov/covidSubmit/archive/round1/BioinfoUA-emb.pdf
 UIowaS,UIowaS_Run3,automatic,0.6467,0.5286,0.2625,0.4686,,yes,https://ir.nist.gov/covidSubmit/archive/round1/UIowaS_Run3.pdf
 covidex,T5R1,automatic,0.6467,0.5223,0.1919,0.2838,http://covidex.ai/,yes,https://ir.nist.gov/covidSubmit/archive/round1/T5R1.pdf
 azimiv,azimiv_wk1,automatic,0.6067,0.5219,0.2351,0.4017,,yes,https://ir.nist.gov/covidSubmit/archive/round1/azimiv_wk1.pdf
