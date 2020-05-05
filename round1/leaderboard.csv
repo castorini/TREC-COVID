@@ -63,3 +63,4 @@ POZNAN,poznan_run1,manual,,0.5867,0.4012,0.1199,0.335,,yes,https://ir.nist.gov/c
 sabir,sab20.1.blind,automatic,query+question+narr,0.54,0.3933,0.1659,0.4194,,no,https://ir.nist.gov/covidSubmit/archive/round1/sab20.1.blind.pdf
 RMITB,RMITBM1,manual,,0.4733,0.3511,0.178,0.4162,,yes,https://ir.nist.gov/covidSubmit/archive/round1/RMITBM1.pdf
 covidex,BM25R2,automatic,unknown,0.4,0.318,0.1628,0.4171,http://covidex.ai/,no,https://ir.nist.gov/covidSubmit/archive/round1/BM25R2.pdf
+
