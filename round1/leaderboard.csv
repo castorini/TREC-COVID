@@ -14,7 +14,7 @@ CSIROmed,CSIROmedNIR,automatic,query+question+narr,0.66,0.5875,0.2169,0.4066,,no
 IRIT_markers,IRIT_marked_un_pair,automatic,unknown,0.7333,0.5859,0.2481,0.4299,,no,https://ir.nist.gov/covidSubmit/archive/round1/IRIT_marked_un_pair.pdf
 columbia_university_dbmi,cu_dbmi_bm25_2,manual,,0.7,0.5819,0.2308,0.374,,yes,https://ir.nist.gov/covidSubmit/archive/round1/cu_dbmi_bm25_2.pdf
 IRIT_markers,IRIT_marked_mu_pair,automatic,unknown,0.6867,0.5813,0.2415,0.4209,,no,https://ir.nist.gov/covidSubmit/archive/round1/IRIT_marked_mu_pair.pdf
-UMASS_CIIR,sheikh_bm25_manual,,manual,0.7267,0.579,0.1578,0.2095,,no,https://ir.nist.gov/covidSubmit/archive/round1/sheikh_bm25_manual.pdf
+UMASS_CIIR,sheikh_bm25_manual,manual,,0.7267,0.579,0.1578,0.2095,,no,https://ir.nist.gov/covidSubmit/archive/round1/sheikh_bm25_manual.pdf
 unipd.it,base.unipd.it,automatic,unknown,0.7267,0.572,0.2081,0.3782,,no,https://ir.nist.gov/covidSubmit/archive/round1/base.unipd.it.pdf
 UIUC_DMG,UIUC_DMG_setrank_re,manual,,0.6733,0.5579,0.2029,0.3763,,no,https://ir.nist.gov/covidSubmit/archive/round1/UIUC_DMG_setrank_re.pdf
 VirginiaTechHAT,crowd1,manual,,0.7067,0.5571,0.2854,0.4531,,no,https://ir.nist.gov/covidSubmit/archive/round1/crowd1.pdf
