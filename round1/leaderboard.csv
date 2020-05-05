@@ -40,7 +40,7 @@ UIUC_DMG,UIUC_DMG_setrank,manual,,0.5733,0.4946,0.1685,0.3656,,no,https://ir.nis
 Elhuyar_NLP_team,elhuyar_rRnk_cbert,automatic,unknown,0.6133,0.4864,0.2093,0.4066,,yes,https://ir.nist.gov/covidSubmit/archive/round1/elhuyar_rRnk_cbert.pdf
 BioinformaticsUA,BioinfoUA-noadapt,automatic,question,0.5867,0.4858,0.1942,0.3745,,no,https://ir.nist.gov/covidSubmit/archive/round1/BioinfoUA-noadapt.pdf
 udel_fang,udel_fang_run1,automatic,query+question,0.6133,0.4838,0.256,0.4161,,no,https://ir.nist.gov/covidSubmit/archive/round1/udel_fang_run1.pdf
-unique_ptr,UP-cqqrnd1,automatic,,0.5933,0.4753,0.2136,0.3782,,no,https://ir.nist.gov/covidSubmit/archive/round1/UP-cqqrnd1.pdf
+unique_ptr,UP-cqqrnd1,automatic,query+question,0.5933,0.4753,0.2136,0.3782,,no,https://ir.nist.gov/covidSubmit/archive/round1/UP-cqqrnd1.pdf
 IRLabKU,KU_run1,automatic,query+question,0.5933,0.4693,0.2205,0.3814,,no,https://ir.nist.gov/covidSubmit/archive/round1/KU_run1.pdf
 IRLabKU,KU_run3,automatic,unknown,0.5667,0.467,0.2116,0.3787,,yes,https://ir.nist.gov/covidSubmit/archive/round1/KU_run3.pdf
 KoreaUniversity_DMIS,dmis-rnd1-run3,manual,,0.5867,0.4649,0.1071,0.2601,https://covidask.korea.ac.kr/,yes,https://ir.nist.gov/covidSubmit/archive/round1/dmis-rnd1-run3.pdf
