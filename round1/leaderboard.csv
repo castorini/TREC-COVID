@@ -9,11 +9,11 @@ sabir,sab20.1.meta.docs,automatic,query+question+narr,0.78,0.608,0.3128,0.4832,,
 GUIR_S2,run2,automatic,query,0.6867,0.6032,0.2601,0.4177,,no,https://ir.nist.gov/covidSubmit/archive/round1/run2.pdf
 OHSU,OHSU_RUN2,manual,,0.7,0.5966,0.2773,0.4483,,yes,https://ir.nist.gov/covidSubmit/archive/round1/OHSU_RUN2.pdf
 columbia_university_dbmi,cu_dbmi_bm25_1,manual,,0.72,0.5887,0.2293,0.3605,,no,https://ir.nist.gov/covidSubmit/archive/round1/cu_dbmi_bm25_1.pdf
-IRIT_markers,IRIT_marked_base,automatic,unknown,0.72,0.588,0.2309,0.4198,,yes,https://ir.nist.gov/covidSubmit/archive/round1/IRIT_marked_base.pdf
+IRIT_markers,IRIT_marked_base,automatic,question,0.72,0.588,0.2309,0.4198,,yes,https://ir.nist.gov/covidSubmit/archive/round1/IRIT_marked_base.pdf
 CSIROmed,CSIROmedNIR,automatic,query+question+narr,0.66,0.5875,0.2169,0.4066,,no,https://ir.nist.gov/covidSubmit/archive/round1/CSIROmedNIR.pdf
-IRIT_markers,IRIT_marked_un_pair,automatic,unknown,0.7333,0.5859,0.2481,0.4299,,no,https://ir.nist.gov/covidSubmit/archive/round1/IRIT_marked_un_pair.pdf
+IRIT_markers,IRIT_marked_un_pair,automatic,question,0.7333,0.5859,0.2481,0.4299,,no,https://ir.nist.gov/covidSubmit/archive/round1/IRIT_marked_un_pair.pdf
 columbia_university_dbmi,cu_dbmi_bm25_2,manual,,0.7,0.5819,0.2308,0.374,,yes,https://ir.nist.gov/covidSubmit/archive/round1/cu_dbmi_bm25_2.pdf
-IRIT_markers,IRIT_marked_mu_pair,automatic,unknown,0.6867,0.5813,0.2415,0.4209,,no,https://ir.nist.gov/covidSubmit/archive/round1/IRIT_marked_mu_pair.pdf
+IRIT_markers,IRIT_marked_mu_pair,automatic,question,0.6867,0.5813,0.2415,0.4209,,no,https://ir.nist.gov/covidSubmit/archive/round1/IRIT_marked_mu_pair.pdf
 UMASS_CIIR,sheikh_bm25_manual,manual,,0.7267,0.579,0.1578,0.2095,,no,https://ir.nist.gov/covidSubmit/archive/round1/sheikh_bm25_manual.pdf
 unipd.it,base.unipd.it,automatic,unknown,0.7267,0.572,0.2081,0.3782,,no,https://ir.nist.gov/covidSubmit/archive/round1/base.unipd.it.pdf
 UIUC_DMG,UIUC_DMG_setrank_re,manual,,0.6733,0.5579,0.2029,0.3763,,no,https://ir.nist.gov/covidSubmit/archive/round1/UIUC_DMG_setrank_re.pdf
