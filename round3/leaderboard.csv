@@ -6,7 +6,7 @@ udel_fang_lambdarank,udel_fang,feedback,yes,0.7567,0.9725,0.8900,0.9800,0.7779,0
 UIowaS_Run2,UIowaS,feedback,no,0.7559,0.9650,0.8950,0.9700,0.7955,0.5759,0.3182,0.1266
 BioInfo-run3,BioinformaticsUA,feedback,no,0.7463,0.9500,0.8600,0.9850,0.7787,0.5467,0.3237,0.1286
 xj4wang_run1,xj4wang,manual,yes,0.7431,0.9650,0.8350,0.9700,0.7300,0.5681,0.2836,0.0969
-xj4wang_run3,xj4wang,manual,no,0.7413,0.9600,0.835,0.9700,0.7299,0.5464,0.2751,0.0920
+xj4wang_run3,xj4wang,manual,no,0.7413,0.9600,0.8350,0.9700,0.7299,0.5464,0.2751,0.0920
 active_learning,risklick,manual,yes,0.7285,0.9750,0.8350,0.9850,0.7770,0.5065,0.2449,0.1072
 sparse-dense-SBrr-2,CIR,feedback,yes,0.7272,0.9775,0.8000,0.9700,0.7675,0.5419,0.3134,0.1451
 udel_fang_FB1,udel_fang,feedback,no,0.7243,0.9600,0.8650,0.9750,0.7691,0.5736,0.3210,0.1310
