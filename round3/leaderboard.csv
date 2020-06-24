@@ -36,7 +36,7 @@ BioInfo-run2,BioinformaticsUA,feedback,no,0.6355,0.8450,0.7300,0.8550,0.6733,0.4
 uogTrDPH_RF_QQN,uogTr,feedback,yes,0.6319,0.9800,0.7700,0.9650,0.6822,0.3818,0.1760,0.1183
 xj4wang_run2,xj4wang,manual,no,0.6252,0.8050,0.7000,0.8000,0.6303,0.5537,0.2534,0.0942
 r3.fusion2,anserini,automatic,no,0.6100,0.9100,0.7150,0.9550,0.6586,0.4953,0.2641,0.1434
-sab20.3.metadocs_m,sabir,automatic,no,0.6032,0.8700,0.6900,0.9000,0.664,0.5202,0.26,0.1398
+sab20.3.metadocs_m,sabir,automatic,no,0.6032,0.8700,0.6900,0.9000,0.664,0.5202,0.2600,0.1398
 crowdPRF,VATech,manual,no,0.6027,0.9325,0.6950,0.9700,0.6640,0.4914,0.2320,0.1099
 Emory_IRLab_rnd3_r1,Emory_IRLab,automatic,yes,0.5867,0.9875,0.7150,0.9850,0.6114,0.5444,0.2132,0.1051
 Emory_IRLab_rnd3_r2,Emory_IRLab,automatic,no,0.5867,0.9875,0.7150,0.9850,0.6114,0.5444,0.2132,0.1051
