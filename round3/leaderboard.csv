@@ -34,10 +34,10 @@ fusionoffusion,IRLabKU,automatic,no,0.6495,0.9650,0.7450,0.9600,0.6632,0.5472,0.
 udel_fang_FB2,udel_fang,feedback,no,0.6366,0.8925,0.7750,0.9500,0.7112,0.5037,0.2690,0.1243
 BioInfo-run2,BioinformaticsUA,feedback,no,0.6355,0.8450,0.7300,0.8550,0.6733,0.4970,0.2625,0.1222
 uogTrDPH_RF_QQN,uogTr,feedback,yes,0.6319,0.9800,0.7700,0.9650,0.6822,0.3818,0.1760,0.1183
-xj4wang_run2,xj4wang,manual,no,0.6252,0.805,0.7000,0.8000,0.6303,0.5537,0.2534,0.0942
+xj4wang_run2,xj4wang,manual,no,0.6252,0.8050,0.7000,0.8000,0.6303,0.5537,0.2534,0.0942
 r3.fusion2,anserini,automatic,no,0.6100,0.9100,0.7150,0.9550,0.6586,0.4953,0.2641,0.1434
 sab20.3.metadocs_m,sabir,automatic,no,0.6032,0.8700,0.6900,0.9000,0.664,0.5202,0.26,0.1398
 crowdPRF,VATech,manual,no,0.6027,0.9325,0.6950,0.9700,0.6640,0.4914,0.2320,0.1099
 Emory_IRLab_rnd3_r1,Emory_IRLab,automatic,yes,0.5867,0.9875,0.7150,0.9850,0.6114,0.5444,0.2132,0.1051
 Emory_IRLab_rnd3_r2,Emory_IRLab,automatic,no,0.5867,0.9875,0.7150,0.9850,0.6114,0.5444,0.2132,0.1051
-mpiid5_run3,mpiid5,feedback,no,0.3583,0.560,0.4250,0.6100,0.3458,0.5935,0.2317,0.1336
+mpiid5_run3,mpiid5,feedback,no,0.3583,0.5600,0.4250,0.6100,0.3458,0.5935,0.2317,0.1336
