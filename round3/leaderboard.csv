@@ -38,7 +38,7 @@ xj4wang_run2,xj4wang,manual,no,0.6252,0.7000,0.6303,0.5537,0.2534
 r3.fusion2,anserini,automatic,no,0.6100,0.7150,0.6586,0.4953,0.2641
 sab20.3.metadocs_m,sabir,automatic,no,0.6032,0.6900,0.6640,0.5202,0.2600
 crowdPRF,VATech,manual,no,0.6027,0.6950,0.6640,0.4914,0.2320
-Emory_IRLab_rnd3_r1,Emory_IRLab,manual,yes,0.5867,0.7150,0.6114,0.5444,0.2132
-Emory_IRLab_rnd3_r2,Emory_IRLab,manual,no,0.5867,0.7150,0.6114,0.5444,0.2132
+Emory_IRLab_rnd3_r1,Emory_IRLab,automatic,yes,0.5867,0.7150,0.6114,0.5444,0.2132
+Emory_IRLab_rnd3_r2,Emory_IRLab,automatic,no,0.5867,0.7150,0.6114,0.5444,0.2132
 mpiid5_run3,mpiid5,feedback,no,0.3583,0.4250,0.3458,0.5935,0.2317
 
