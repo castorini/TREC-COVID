@@ -5,6 +5,7 @@ import os
 import pdftotext
 import re
 
+
 def create_file_dct(run_file):
     eval_path = os.path.join(args.anserini_root, 'eval/trec_eval/trec_eval')
     measure_judged_path = os.path.join(args.anserini_root, 'tools/eval/measure_judged.py ')
@@ -13,12 +14,12 @@ def create_file_dct(run_file):
         shell=True)
     output_lst = output.split()
 
-    J_measure = subprocess.check_output(
-        f'python3 {measure_judged_path}--qrels {qrels} --cutoffs 10 5 1000 --run {runs}/{run_file}', shell=True)
-    J_measure_lst = J_measure.split()
+    j_measure = subprocess.check_output(
+        f'python {measure_judged_path}--qrels {qrels} --cutoffs 10 5 1000 --run {runs}/{run_file}', shell=True)
+    j_measure_lst = j_measure.split()
 
-    clean_output = [float(output_lst[11]), float(J_measure_lst[2]), float(output_lst[8]), float(J_measure_lst[5]),
-                    float(output_lst[14]), float(output_lst[5]), float(output_lst[2]), float(J_measure_lst[8])]
+    clean_output = [float(output_lst[11]), float(j_measure_lst[2]), float(output_lst[8]), float(j_measure_lst[5]),
+                    float(output_lst[14]), float(output_lst[5]), float(output_lst[2]), float(j_measure_lst[8])]
     return clean_output
 
 
@@ -28,10 +29,10 @@ def compare_score(actual_score, row, score_type_lst):
         expected_score = row[i + 4]
         if actual_score[i] != expected_score:
             score_type = score_type_lst[i]
-            print(f"In the run {run_name}, the score for {score_type} doesn't match")
-            print(f"The expected score is {expected_score}, but the actual score is {actual_score[i]}\n")
+            print(f'In the run {run_name}, the score for {score_type} does not match')
+            print(f'The expected score is {expected_score}, but the actual score is {actual_score[i]}\n')
     if actual_score == row[4:].tolist():
-        print(f"All scores in the run {run_name} match")
+        print(f'All scores in the run {run_name} match')
 
 
 def create_runs_info(file):
@@ -54,10 +55,9 @@ def compare_score_dct():
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Compare all runs')
-    parser.add_argument('--anserini_root', default='', help='Anserini path',required=True)
-    parser.add_argument('--run_root', default='', help='root to the runs directory',required=True)
-    parser.add_argument('--output_root', default='', help='path to the output csv file', required=True)
+    parser = argparse.ArgumentParser(description='Compare all runs and generate a new leaderbroad.')
+    parser.add_argument('--anserini_root', default='', help='Set the path to Anserini directory', required=True)
+    parser.add_argument('--run_root', default='', help='Set the path to TREC_COVID directory', required=True)
     args = parser.parse_args()
     qrels = os.path.join(args.anserini_root, 'src/main/resources/topics-and-qrels/qrels.covid-round3.txt')
     runs = os.path.join(args.run_root, 'runs')
@@ -77,5 +77,5 @@ if __name__ == '__main__':
                        'bpref', 'map', 'J@1000']
 
     df_runs = df_runs.sort_values(by=['ndcg@10'], ascending=False)
-    df_runs.to_csv(args.output_root, index = False)
-    print('Succesfully generate all runs score in '+args.output_root)
+    df_runs.to_csv(leaderboard_runs, index=False)
+    print('Successfully generate all runs score in ' + leaderboard_runs)
