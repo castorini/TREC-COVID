@@ -5,7 +5,6 @@ import os
 import pdftotext
 import re
 
-
 def create_file_dct(run_file):
     eval_path = os.path.join(args.anserini_root, 'eval/trec_eval/trec_eval')
     measure_judged_path = os.path.join(args.anserini_root, 'tools/eval/measure_judged.py ')
