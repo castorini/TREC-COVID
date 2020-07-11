@@ -4,6 +4,7 @@ import argparse
 import os
 import pdftotext
 import re
+from decimal import Decimal
 
 
 def create_file_dct(run_file):
@@ -15,11 +16,14 @@ def create_file_dct(run_file):
     output_lst = output.split()
 
     j_measure = subprocess.check_output(
-        f'python {measure_judged_path}--qrels {qrels} --cutoffs 10 5 1000 --run {runs}/{run_file}', shell=True)
+        f'python3 {measure_judged_path}--qrels {qrels} --cutoffs 10 5 1000 --run {runs}/{run_file}', shell=True)
     j_measure_lst = j_measure.split()
 
-    clean_output = [float(output_lst[11]), float(j_measure_lst[2]), float(output_lst[8]), float(j_measure_lst[5]),
-                    float(output_lst[14]), float(output_lst[5]), float(output_lst[2]), float(j_measure_lst[8])]
+    clean_output = [float(output_lst[11]), float(j_measure_lst[2]),
+                    float(output_lst[8]),float(j_measure_lst[5]),
+                    float(output_lst[14]), float(output_lst[5]),
+                    float(output_lst[2]), float(j_measure_lst[8])]
+    clean_output = [float(Decimal(output).quantize(Decimal("0.0000"))) for output in clean_output]
     return clean_output
 
 
@@ -77,5 +81,5 @@ if __name__ == '__main__':
                        'bpref', 'map', 'J@1000']
 
     df_runs = df_runs.sort_values(by=['ndcg@10'], ascending=False)
-    df_runs.to_csv(leaderboard_runs, index=False)
+    df_runs.to_csv(leaderboard_runs, float_format='%.4f',index=False)
     print('Successfully generate all runs score in ' + leaderboard_runs)
