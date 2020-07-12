@@ -26,10 +26,11 @@ CsvToHtmlTable = {
                 var $tableHead = $("<thead></thead>");
                 var csvHeaderRow = csvData[0];
                 var $tableHeadRow = $("<tr></tr>");
-                var $tableHeaderFilterRow = $("<tr class='dropdown'></tr>");
+                var $tableHeaderFilterRow = $("<div class='dropdown'></div>")
+                    .text('Showing {all, feedback, manual, automatic} runs - where ')
+                    .css('width', 600);
                 for (var headerIdx = 0; headerIdx < csvHeaderRow.length; headerIdx++) {
                     $tableHeadRow.append($("<th></th>").text(csvHeaderRow[headerIdx]));
-                    $tableHeaderFilterRow.append($(`<td class="number${headerIdx}"></td>`));
                 }
                 $tableHead.append($tableHeaderFilterRow);
                 $tableHead.append($tableHeadRow);
@@ -60,8 +61,8 @@ CsvToHtmlTable = {
                     initComplete: function () {
                         this.api().columns([2]).every( function () {
                             var column = this;
-                            var select = $('<select><option value=""></option></select>')
-                                .appendTo( $('.table .dropdown .number2').empty() )
+                            var select = $('<select><option value="">all</option></select>')
+                                .appendTo( $('.table .dropdown') )
                                 .on( 'change', function () {
                                     var val = $.fn.dataTable.util.escapeRegex(
                                         $(this).val()
@@ -76,6 +77,7 @@ CsvToHtmlTable = {
                                 select.append( '<option value="'+d+'">'+d+'</option>' )
                             } );
                         } );
+                        $('.table .dropdown').append(' is the dropdown box.');
                     }
                 });
 
