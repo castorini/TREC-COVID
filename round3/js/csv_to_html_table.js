@@ -27,7 +27,7 @@ CsvToHtmlTable = {
                 var csvHeaderRow = csvData[0];
                 var $tableHeadRow = $("<tr></tr>");
                 var $tableHeaderFilterRow = $("<div class='dropdown'></div>")
-                    .text('Showing {all, feedback, manual, automatic} runs - where ')
+                    .text('Showing ')
                     .css('width', 600);
                 for (var headerIdx = 0; headerIdx < csvHeaderRow.length; headerIdx++) {
                     $tableHeadRow.append($("<th></th>").text(csvHeaderRow[headerIdx]));
@@ -58,6 +58,7 @@ CsvToHtmlTable = {
 
                 $table.DataTable({
                     'paging':false,
+                    "order": [[ 4, "desc" ]],
                     initComplete: function () {
                         this.api().columns([2]).every( function () {
                             var column = this;
@@ -77,7 +78,7 @@ CsvToHtmlTable = {
                                 select.append( '<option value="'+d+'">'+d+'</option>' )
                             } );
                         } );
-                        $('.table .dropdown').append(' is the dropdown box.');
+                        $('.table .dropdown').append(' submissions');
                     }
                 });
 
