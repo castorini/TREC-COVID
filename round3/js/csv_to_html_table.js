@@ -58,6 +58,7 @@ CsvToHtmlTable = {
 
                 $table.DataTable({
                     'paging':false,
+                    "order": [[ 4, "desc" ]],
                     initComplete: function () {
                         this.api().columns([2]).every( function () {
                             var column = this;
