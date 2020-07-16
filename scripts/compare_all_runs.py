@@ -58,6 +58,11 @@ def create_runs_info(file):
     team_name = ('_').join(re.findall('submitted from.+?\n', context[0])[0].split()[2:])
     runstype = re.findall('Topic type.+?Total number retrieved', context[0])[0].split()[2]
     jugement = re.findall('Contributed to judgment sets?.+?Total relevant', context[0])[0].split()[4]
+    if round_number == '2':
+        if jugement =='yes':
+            jugement = 'JUDGED'
+        else:
+            jugement = 'UNJUDGED'
     return [file, team_name, runstype, jugement]
 
 
@@ -98,12 +103,14 @@ if __name__ == '__main__':
         df_runs = pd.DataFrame(df_lst)
 
         if round_number == '2':
-            df_runs.columns = ['tag', 'team', 'runtype', 'contributed judgments', 'ndcg@10', 'P@5', 'rbp_p5',
-                        'bpref', 'map']
+            df_runs.columns = ['tag', 'team', 'type', 'judged?', 'NDCG@10', 'P@5', 'RBP(p=.5)',
+                        'bpref', 'MAP']
+            df_runs = df_runs.sort_values(by=['NDCG@10'], ascending=False)
         elif round_number == '3':
             df_runs.columns = ['run', 'team', 'runtype', 'contributed judgments', 'ndcg@10', 'J@10', 'P@5', 'J@5', 'rbp_p5',
                        'bpref', 'map', 'J@1000']
+            df_runs = df_runs.sort_values(by=['ndcg@10'], ascending=False)
 
-        df_runs = df_runs.sort_values(by=['ndcg@10'], ascending=False)
+
         df_runs.to_csv(leaderboard_runs, float_format='%.4f',index=False)
         print('Successfully generate all runs score in ' + leaderboard_runs)
