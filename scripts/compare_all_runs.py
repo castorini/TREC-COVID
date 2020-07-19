@@ -11,11 +11,24 @@ def create_file_dct(run_file):
 
     eval_path = os.path.join(args.anserini_root, 'eval/trec_eval/trec_eval')
     output = subprocess.check_output(
-        f'{eval_path} -c -m ndcg_cut.10 -m P.5 -m bpref -m map -m rbp.p=0.5 {qrels} {runs}/{run_file}',
-        shell=True)
+        f'{eval_path} -c -m ndcg_cut.10 -m P.5 -m bpref -m map -m rbp.p=0.5 {qrels} {runs}/{run_file}', shell=True)
     output_lst = output.split()
 
-    if round_number == '2':
+    if round_number == '1':
+        rbp_scores = []
+        clean_output = [float(output_lst[11]), float(output_lst[8])]
+        for p in ['0.8','0.9','0.95']:
+            rbp_res = subprocess.check_output(
+            f'{eval_path} -c -m rbp.p={p} -m rbp_resid.p={p} {qrels} {runs}/{run_file}', shell=True)
+            rbp_res_lst = rbp_res.split()
+            rbp_resid_p = float(rbp_res_lst[5])
+            rbp_p = float(rbp_res_lst[2])
+            clean_output.extend([rbp_p,rbp_resid_p])
+
+        clean_output.extend([float(output_lst[5]),
+                    float(output_lst[2])])
+
+    elif round_number == '2':
     
         clean_output = [float(output_lst[11]), float(output_lst[8]),
                     float(output_lst[14]), float(output_lst[5]),
@@ -39,12 +52,12 @@ def create_file_dct(run_file):
 def compare_score(actual_score, row, score_type_lst):
     run_name = row[0]
     for i in range(len(actual_score)):
-        expected_score = row[i + 4]
+        expected_score = row[i + 6]
         if actual_score[i] != expected_score:
             score_type = score_type_lst[i]
             print(f'In the run {run_name}, the score for {score_type} does not match')
             print(f'The expected score is {expected_score}, but the actual score is {actual_score[i]}\n')
-    if actual_score == row[4:].tolist():
+    if actual_score == row[6:].tolist():
         print(f'All scores in the run {run_name} match')
         return True
     return False
@@ -63,12 +76,12 @@ def create_runs_info(file):
             jugement = 'JUDGED'
         else:
             jugement = 'UNJUDGED'
-    return [file, team_name, runstype, jugement]
+    return [file, team_name, runstype, jugement, f'https://ir.nist.gov/covidSubmit/archive/round{round_number}/{file}.pdf','']
 
 
 def compare_score_dct():
-    df = pd.read_csv(leaderboard_runs).round(4)
-    score_type_lst = df.columns[4:]
+    df = pd.read_csv(leaderboard_runs).round(4).fillna('')
+    score_type_lst = df.columns[6:]
     for index, row in df.iterrows():
         actual_score = create_file_dct(row[0])
         compare_res = compare_score(actual_score, row, score_type_lst)
@@ -81,7 +94,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Compare all runs and generate a new leaderbroad.')
     parser.add_argument('--anserini_root', default='', help='Set the path to Anserini directory', required=True)
     parser.add_argument('--run_root', default='', help='Set the path to TREC_COVID directory', required=True)
-    parser.add_argument('--round_number', default='', help='Set the round number, it supports round2 and round3 now', required=True)
+    parser.add_argument('--round_number', default='', help='Set the round number, it supports round1,round2 and round3 now', required=True)
     
     args = parser.parse_args()
     round_number = args.round_number
@@ -102,12 +115,16 @@ if __name__ == '__main__':
                 df_lst.append(file_lst)
         df_runs = pd.DataFrame(df_lst)
 
-        if round_number == '2':
-            df_runs.columns = ['tag', 'team', 'type', 'judged?', 'NDCG@10', 'P@5', 'RBP(p=.5)',
+        if round_number == '1':
+            df_runs.columns = ['run', 'team', 'runtype', 'contributed judgments','report', 'topicformat','ndcg@10', 'p@5',
+            'rbp_80','rbp_80_residual', 'rbp_90','rbp_90_residual','rbp_95','rbp_95_residual', 'bpref', 'map']
+            df_runs = df_runs.sort_values(by=['ndcg@10'], ascending=False)
+        elif round_number == '2':
+            df_runs.columns = ['tag', 'team', 'type', 'judged?','report','topicformat', 'NDCG@10', 'P@5', 'RBP(p=.5)',
                         'bpref', 'MAP']
             df_runs = df_runs.sort_values(by=['NDCG@10'], ascending=False)
         elif round_number == '3':
-            df_runs.columns = ['run', 'team', 'runtype', 'contributed judgments', 'ndcg@10', 'J@10', 'P@5', 'J@5', 'rbp_p5',
+            df_runs.columns = ['run', 'team', 'runtype', 'contributed judgments', 'report','topicformat', 'ndcg@10', 'J@10', 'P@5', 'J@5', 'rbp_p5',
                        'bpref', 'map', 'J@1000']
             df_runs = df_runs.sort_values(by=['ndcg@10'], ascending=False)
 
