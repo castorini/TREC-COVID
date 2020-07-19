@@ -22,7 +22,7 @@ def create_file_dct(run_file,topic_format):
         # j measurement
         measure_judged_path = os.path.join(args.anserini_root, 'tools/eval/measure_judged.py ')
         j_measure = subprocess.check_output(
-        f'python3 {measure_judged_path}--qrels {qrels} --cutoffs 10 5 1000 --run {runs}/{run_file}', shell=True)
+        f'python {measure_judged_path}--qrels {qrels} --cutoffs 10 5 1000 --run {runs}/{run_file}', shell=True)
         j_measure_lst = j_measure.split()
 
         clean_output = [topic_format,float(output_lst[11]), float(j_measure_lst[2]),
