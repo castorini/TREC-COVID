@@ -35,6 +35,8 @@ def create_file_dct(run_file,topic_format):
 
 def compare_score(actual_score, row, score_type_lst):
     run_name = row[0]
+    # print(actual_score)
+    # print(row)
     for i in range(len(actual_score)):
         expected_score = row[i + 5]
         if actual_score[i] != expected_score:
@@ -55,6 +57,14 @@ def create_runs_info(file):
     team_name = ('_').join(re.findall('submitted from.+?\n', context[0])[0].split()[2:])
     runstype = re.findall('Topic type.+?Total number retrieved', context[0])[0].split()[2]
     jugement = re.findall('Contributed to judgment sets?.+?Total relevant', context[0])[0].split()[4]
+<<<<<<< HEAD
+=======
+    if round_number == '2':
+        if jugement =='yes':
+            jugement = 'JUDGED'
+        else:
+            jugement = 'UNJUDGED'
+>>>>>>> 9d227d5697bcb723fbad894a3e50dfde4b71e892
     return [file, team_name,f'reports/{file}.pdf', runstype, jugement]
 
 
