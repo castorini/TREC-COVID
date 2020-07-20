@@ -57,11 +57,6 @@ def create_runs_info(file):
     team_name = ('_').join(re.findall('submitted from.+?\n', context[0])[0].split()[2:])
     runstype = re.findall('Topic type.+?Total number retrieved', context[0])[0].split()[2]
     jugement = re.findall('Contributed to judgment sets?.+?Total relevant', context[0])[0].split()[4]
-    if round_number == '2':
-        if jugement =='yes':
-            jugement = 'JUDGED'
-        else:
-            jugement = 'UNJUDGED'
     return [file, team_name,f'reports/{file}.pdf', runstype, jugement]
 
 
@@ -111,7 +106,7 @@ if __name__ == '__main__':
             'RBP(p=.5)','bpref', 'MAP']
             df_runs = df_runs.sort_values(by=['ndcg@10'], ascending=False)
         elif round_number == '2':
-            df_runs.columns = ['tag', 'team','report', 'type', 'judged?','topicformat', 'NDCG@10', 'P@5', 'RBP(p=.5)',
+            df_runs.columns = ['tag', 'team','report', 'type', 'contributed judgments','topicformat', 'NDCG@10', 'P@5', 'RBP(p=.5)',
                         'bpref', 'MAP']
             df_runs = df_runs.sort_values(by=['NDCG@10'], ascending=False)
         elif round_number == '3':
