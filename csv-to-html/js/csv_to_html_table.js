@@ -59,8 +59,15 @@ CsvToHtmlTable = {
                 $table.DataTable({
                     'paging':false,
                     "order": [[ 6, "desc" ]],
+                    "columnDefs": [ {
+                        "targets": 2,
+                        "data": "report_link",
+                        "render": function ( data, type, row, meta ) {
+                          return '<a href="'+data+'">report</a>';
+                        }
+                      }  ],
                     initComplete: function () {
-                        this.api().columns([2]).every( function () {
+                        this.api().columns([3]).every( function () {
                             var column = this;
                             var select = $('<select><option value="">all</option></select>')
                                 .appendTo( $('.table .dropdown') )
