@@ -13,7 +13,7 @@ def create_file_dct(run_file,topic_format):
         f'{eval_path} -c -m ndcg_cut.10 -m P.5 -m bpref -m map -m rbp.p=0.5 {qrels} {runs}/{run_file}', shell=True)
     output_lst = output.split()
 
-    if round_number == ('1' or '2'):
+    if round_number == '1' or round_number == '2':
         clean_output = [topic_format,float(output_lst[11]), float(output_lst[8]),
                     float(output_lst[14]), float(output_lst[5]),
                     float(output_lst[2])]
@@ -62,7 +62,7 @@ def create_runs_info(file):
             jugement = 'JUDGED'
         else:
             jugement = 'UNJUDGED'
-    return [file, team_name,f'https://ir.nist.gov/covidSubmit/archive/round{round_number}/{file}.pdf', runstype, jugement]
+    return [file, team_name,f'reports/{file}.pdf', runstype, jugement]
 
 
 def compare_score_dct():

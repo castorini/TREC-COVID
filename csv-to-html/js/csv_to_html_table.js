@@ -63,7 +63,7 @@ CsvToHtmlTable = {
                         "targets": 2,
                         "data": "report_link",
                         "render": function ( data, type, row, meta ) {
-                          return '<a href="'+data+'">'+data+'</a>';
+                          return '<a href="'+data+'">report</a>';
                         }
                       }  ],
                     initComplete: function () {
