@@ -14,7 +14,7 @@ xj4wang_run1,xj4wang,reports/xj4wang_run1.pdf,manual,yes,,0.7019,0.7244,0.7946,0
 xj4wang_run3,xj4wang,reports/xj4wang_run3.pdf,manual,no,,0.7019,0.7244,0.7946,0.5084,0.2775
 r4.rf,anserini,reports/r4.rf.pdf,feedback,yes,,0.6976,0.7344,0.8174,0.5607,0.3519
 sab20.4.rocchio,sabir,reports/sab20.4.rocchio.pdf,feedback,yes,,0.6921,0.7133,0.8291,0.5802,0.3333
-covidex.r4.duot5,covidex,reports/covidex.r4.duot5.pdf,feedback,no,,0.6877,0.6922,0.8130,0.5576,0.3283
+covidex.r4.duot5,covidex,reports/covidex.r4.duot5.pdf,automatic,no,,0.6877,0.6922,0.8130,0.5576,0.3283
 xj4wang_run2,xj4wang,reports/xj4wang_run2.pdf,manual,yes,,0.6855,0.7278,0.7486,0.5216,0.2774
 uogTrDPH_QE_SCB1,uogTr,reports/uogTrDPH_QE_SCB1.pdf,automatic,yes,,0.6820,0.7144,0.8003,0.5510,0.3457
 uw_crowd,UWMadison_iSchool,reports/uw_crowd.pdf,manual,yes,,0.6811,0.7189,0.7725,0.6317,0.3923
