@@ -89,7 +89,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Compare all runs and generate a new leaderbroad.')
     parser.add_argument('--anserini_root', default='', help='Set the path to Anserini directory', required=True)
     parser.add_argument('--run_root', default='', help='Set the path to TREC_COVID directory', required=True)
-    parser.add_argument('--round_number', default='', help='Set the round number, it supports round 1, 2 , 3 and 4 now', required=True)
+    parser.add_argument('--round_number', default='', help='Set the round number, it supports round 1, 2 , 3, 4 and 5 now', required=True)
     
     args = parser.parse_args()
     round_number = args.round_number
