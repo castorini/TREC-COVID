@@ -33,7 +33,7 @@ def create_file_dct(run_file,topic_format):
                     float(output_lst[14]), float(output_lst[5]),
                     float(output_lst[2]), float(j_measure_lst[8])]
     
-    elif round_number == '4':
+    elif round_number == '4' or round_number == '5':
         output = subprocess.check_output(
         f'{eval_path} -c -m ndcg_cut.20 -m P.20 -m bpref -m map -m rbp.p=0.5 {qrels} {runs}/{run_file}', shell=True)
         output_lst = output.split()
@@ -126,7 +126,7 @@ if __name__ == '__main__':
             df_runs.columns = ['run', 'team', 'report','runtype', 'contributed judgments', 'topicformat', 'ndcg@10', 'J@10', 'P@5', 'J@5', 'rbp_p5',
                        'bpref', 'map', 'J@1000']
             df_runs = df_runs.sort_values(by=['ndcg@10'], ascending=False)
-        elif round_number == '4':
+        elif round_number == '4' or round_number == '5':
             df_runs.columns = ['tag', 'team', 'report','runtype', 'contributed judgments', 'topicformat', 'ndcg@20', 'P@20', 'rbp_p5',
                        'bpref', 'map']
             df_runs = df_runs.sort_values(by=['ndcg@20'], ascending=False)
