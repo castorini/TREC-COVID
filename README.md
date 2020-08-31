@@ -6,3 +6,4 @@ This repo captures TREC-COVID results, including a mirror of data on the [offici
 + [TREC-COVID Round 2 Leaderboard](https://castorini.github.io/TREC-COVID/round2/)
 + [TREC-COVID Round 3 Leaderboard](https://castorini.github.io/TREC-COVID/round3/)
 + [TREC-COVID Round 4 Leaderboard](https://castorini.github.io/TREC-COVID/round4/)
++ [TREC-COVID Round 5 Leaderboard](https://castorini.github.io/TREC-COVID/round5/)
